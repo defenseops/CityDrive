@@ -359,7 +359,7 @@ exports.up = (pgm) => {
     );
 
     ALTER TABLE car_damages
-      ADD CONSTRAINT IF NOT EXISTS car_damages_maintenance_id_fkey
+      ADD CONSTRAINT car_damages_maintenance_id_fkey
       FOREIGN KEY (maintenance_id) REFERENCES maintenance(id);
 
     -- ============================================================
@@ -389,7 +389,7 @@ exports.up = (pgm) => {
     );
 
     ALTER TABLE car_damages
-      ADD CONSTRAINT IF NOT EXISTS car_damages_inspection_report_id_fkey
+      ADD CONSTRAINT car_damages_inspection_report_id_fkey
       FOREIGN KEY (inspection_report_id) REFERENCES inspection_reports(id);
 
     -- ============================================================
